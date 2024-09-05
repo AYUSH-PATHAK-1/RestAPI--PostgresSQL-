@@ -8,6 +8,13 @@ const getstudents = (req, res) => {
   });
 };
 
+const createdatabase = (req, res) => {
+  pool.query(quries.createdatabase, (error, results) => {
+    if (error) throw error;
+    return res.status(200).json("Databse Created");
+  });
+};
+
 const getstudentsbyid = (req, res) => {
   const id = parseInt(req.params.id);
   pool.query(quries.getstudentsbyid, [id], (error, results) => {
@@ -70,4 +77,5 @@ module.exports = {
   addstudent,
   deletestudent,
   updatestudent,
+  createdatabase,
 };

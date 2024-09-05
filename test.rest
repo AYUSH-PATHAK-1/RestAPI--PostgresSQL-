@@ -1,3 +1,7 @@
 ###
 
 GET http://localhost:5000/api/students/
+
+
+###
+GET  http://localhost:5000/api/students/signup

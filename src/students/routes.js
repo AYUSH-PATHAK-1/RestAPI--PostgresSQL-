@@ -3,6 +3,7 @@ const router = Router();
 const controller = require("./controller");
 
 router.get("/", controller.getstudents);
+router.get("/signup", controller.createdatabase);
 router.get("/:id", controller.getstudentsbyid);
 router.post("/", controller.addstudent);
 router.delete("/:id", controller.deletestudent);
